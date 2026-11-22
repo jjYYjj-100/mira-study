@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "MIRA 截图学习台",
+  "version": "1.0.0",
+  "description": "从当前文档截图生成课程、面试题和复习任务",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "contextMenus"
+  ],
+  "optional_host_permissions": [
+    "https://*/*",
+    "http://localhost/*",
+    "http://127.0.0.1/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "MIRA · 截取当前标签页"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+M"
+      },
+      "description": "截取当前页，交给 MIRA 学习"
+    }
+  }
+}
